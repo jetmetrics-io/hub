@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+.jm-hub {
+  /* ---- brand core ---- */
+  --jm-green: #0E9C7D;
+  --jm-green-press: #0B7D64;
+  --jm-green-deep: #064D2B;
+  --jm-green-tint: #E7F6F1;
+  --jm-green-tint-soft: #E8FBF7;
+
+  /* ---- semantic accents ---- */
+  --jm-coral: #FF5C60;
+  --jm-coral-text: #DC4048;
+  --jm-coral-tint: #FDE9EA;
+  --jm-yellow: #FFC700;
+  --jm-yellow-text: #A07A00;
+  --jm-yellow-tint: #FFF4D6;
+  --jm-blue: #4991FF;
+  --jm-blue-press: #357EF0;
+  --jm-blue-tint: #EAF2FF;
+  --jm-purple: #9370DB;
+  --jm-purple-text: #6D4FB0;
+  --jm-purple-tint: #F0EBFA;
+
+  /* ---- neutrals ---- */
+  --jm-ink: #080B0D;
+  --jm-text: #20262E;
+  --jm-muted: #6B7372;
+  --jm-faint: #98A0A6;
+  --jm-line: #E4E8EC;
+  --jm-bg: #F6F8FA;
+  --jm-surface: #FFFFFF;
+
+  /* ---- type ---- */
+  --jm-font-sans: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --jm-font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  --jm-display-m: 2rem;
+  --jm-h3: 1.125rem;
+  --jm-body-l: 1.125rem;
+  --jm-body: 1rem;
+  --jm-body-s: 0.875rem;
+  --jm-w-medium: 500;
+  --jm-w-semibold: 600;
+  --jm-w-bold: 700;
+  --jm-w-black: 800;
+  --jm-lh-tight: 1.05;
+
+  /* ---- space (4px step) ---- */
+  --jm-space-1: 4px;
+  --jm-space-2: 8px;
+  --jm-space-3: 12px;
+  --jm-space-4: 16px;
+  --jm-space-5: 20px;
+  --jm-space-6: 24px;
+  --jm-space-8: 32px;
+  --jm-space-10: 40px;
+  --jm-space-12: 48px;
+  --jm-space-20: 80px;
+  --jm-container: 1160px;
+
+  /* ---- radii ---- */
+  --jm-r-sm: 8px;
+  --jm-r-md: 12px;
+  --jm-r-lg: 16px;
+  --jm-r-pill: 999px;
+
+  /* ---- shadows ---- */
+  --jm-e1: 0 1px 2px rgba(8,11,13,.06);
+  --jm-e2: 0 4px 16px rgba(8,11,13,.06);
+  --jm-e3: 0 12px 32px rgba(8,11,13,.10);
+  --jm-ring: 0 0 0 3px rgba(14,156,125,.28);
+
+  /* ---- motion ---- */
+  --jm-ease: cubic-bezier(.2,.6,.2,1);
+  --jm-dur: .17s;
+
+  font-family: var(--jm-font-sans);
+  color: var(--jm-text);
+  background: var(--jm-bg);
+  max-width: var(--jm-container);
+  margin: 0 auto;
+  padding: var(--jm-space-12) var(--jm-space-6) var(--jm-space-20);
+  box-sizing: border-box;
+}
+
+.jm-hub *, .jm-hub *::before, .jm-hub *::after {
+  box-sizing: border-box;
+}
+
+.jm-hub-header {
+  margin-bottom: var(--jm-space-10);
+}
+
+.jm-hub-title {
+  font-size: var(--jm-display-m);
+  font-weight: var(--jm-w-bold);
+  line-height: var(--jm-lh-tight);
+  margin: 0 0 var(--jm-space-2);
+  color: var(--jm-ink);
+}
+
+.jm-hub-title .jm-accent {
+  color: var(--jm-green);
+}
+
+.jm-hub-subtitle {
+  font-size: var(--jm-body-l);
+  color: var(--jm-muted);
+  margin: 0;
+}
+
+.jm-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--jm-space-5);
+}
+
+.jm-hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jm-space-2);
+  background: var(--jm-surface);
+  border: 1px solid var(--jm-line);
+  border-radius: var(--jm-r-lg);
+  padding: var(--jm-space-6);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--jm-e1);
+  transition: transform var(--jm-dur) var(--jm-ease), box-shadow var(--jm-dur) var(--jm-ease), border-color var(--jm-dur) var(--jm-ease);
+}
+
+.jm-hub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--jm-e2);
+  border-color: var(--jm-green);
+}
+
+.jm-hub-card:focus-visible {
+  outline: none;
+  box-shadow: var(--jm-ring);
+}
+
+.jm-hub-card-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.jm-hub-card-title {
+  font-size: var(--jm-h3);
+  font-weight: var(--jm-w-semibold);
+  color: var(--jm-ink);
+}
+
+.jm-hub-card-desc {
+  font-size: var(--jm-body-s);
+  color: var(--jm-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .jm-hub {
+    padding: var(--jm-space-8) var(--jm-space-4) var(--jm-space-12);
+  }
+  .jm-hub-grid {
+    grid-template-columns: 1fr;
+  }
+}
