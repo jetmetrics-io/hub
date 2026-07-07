@@ -157,6 +157,37 @@
   line-height: 1.4;
 }
 
+.jm-hub-card--soon {
+  position: relative;
+  cursor: default;
+  background: var(--jm-bg);
+  border-style: dashed;
+}
+
+.jm-hub-card--soon:hover {
+  transform: none;
+  box-shadow: var(--jm-e1);
+  border-color: var(--jm-line);
+}
+
+.jm-hub-card--soon .jm-hub-card-icon,
+.jm-hub-card--soon .jm-hub-card-title {
+  opacity: 0.5;
+}
+
+.jm-hub-card-badge {
+  position: absolute;
+  top: var(--jm-space-4);
+  right: var(--jm-space-4);
+  font-size: 11px;
+  font-weight: var(--jm-w-semibold);
+  color: var(--jm-muted);
+  background: var(--jm-surface);
+  border: 1px solid var(--jm-line);
+  border-radius: var(--jm-r-pill);
+  padding: 2px var(--jm-space-2);
+}
+
 @media (max-width: 640px) {
   .jm-hub {
     padding: var(--jm-space-8) var(--jm-space-4) var(--jm-space-12);

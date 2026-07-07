@@ -4,8 +4,43 @@
       "id": "cheatsheets",
       "title": "Библиотека читшитов",
       "description": "93 читшита по аналитике: карты метрик, диагностика, дашборды и многое другое",
-      "link": "https://merrily-manly-food.tilda.ws/page152618166.html",
+      "link": "https://джетметрикс.рф/cheatsheets",
       "icon": "📊"
+    },
+    {
+      "id": "atlas",
+      "title": "Атлас Метрик",
+      "description": "Каталог метрик по продукту и маркетингу — бесплатная версия",
+      "icon": "🗺️",
+      "comingSoon": true
+    },
+    {
+      "id": "boards",
+      "title": "Доски",
+      "description": "Рабочие материалы на Miro/Эсборд",
+      "icon": "🧩",
+      "comingSoon": true
+    },
+    {
+      "id": "compilations",
+      "title": "Компиляции",
+      "description": "Подборки и базы: AB-тесты, идеи сегментации и другое",
+      "icon": "🗂️",
+      "comingSoon": true
+    },
+    {
+      "id": "dashboards",
+      "title": "Дашборды",
+      "description": "Готовые дашборды под русские источники данных",
+      "icon": "📈",
+      "comingSoon": true
+    },
+    {
+      "id": "articles",
+      "title": "Статьи",
+      "description": "Переводы статей по аналитике",
+      "icon": "📝",
+      "comingSoon": true
     }
   ]
 }

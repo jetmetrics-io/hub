@@ -7,11 +7,14 @@
     if (!grid) return;
     grid.innerHTML = "";
     materials.forEach(function (item) {
-      var card = document.createElement("a");
-      card.className = "jm-hub-card";
-      card.href = item.link;
-      card.target = "_blank";
-      card.rel = "noopener";
+      var isSoon = !!item.comingSoon;
+      var card = document.createElement(isSoon ? "div" : "a");
+      card.className = "jm-hub-card" + (isSoon ? " jm-hub-card--soon" : "");
+      if (!isSoon) {
+        card.href = item.link;
+        card.target = "_blank";
+        card.rel = "noopener";
+      }
 
       var icon = document.createElement("div");
       icon.className = "jm-hub-card-icon";
@@ -27,6 +30,13 @@
       desc.className = "jm-hub-card-desc";
       desc.textContent = item.description || "";
       card.appendChild(desc);
+
+      if (isSoon) {
+        var badge = document.createElement("div");
+        badge.className = "jm-hub-card-badge";
+        badge.textContent = "Скоро";
+        card.appendChild(badge);
+      }
 
       grid.appendChild(card);
     });
