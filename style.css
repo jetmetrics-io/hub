@@ -126,6 +126,7 @@
   text-decoration: none;
   color: inherit;
   box-shadow: var(--jm-e1);
+  position: relative;
   transition: transform var(--jm-dur) var(--jm-ease), box-shadow var(--jm-dur) var(--jm-ease), border-color var(--jm-dur) var(--jm-ease);
 }
 
@@ -158,7 +159,6 @@
 }
 
 .jm-hub-card--soon {
-  position: relative;
   cursor: default;
   background: var(--jm-bg);
   border-style: dashed;
@@ -186,6 +186,12 @@
   border: 1px solid var(--jm-line);
   border-radius: var(--jm-r-pill);
   padding: 2px var(--jm-space-2);
+}
+
+.jm-hub-card-badge--live {
+  color: var(--jm-green-deep);
+  background: var(--jm-green-tint);
+  border-color: transparent;
 }
 
 @media (max-width: 640px) {
