@@ -24,8 +24,6 @@
       card.className = "jm-hub-card" + (isSoon ? " jm-hub-card--soon" : "");
       if (!isSoon) {
         card.href = item.link;
-        card.target = "_blank";
-        card.rel = "noopener";
       }
 
       var icon = document.createElement("div");
