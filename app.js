@@ -24,6 +24,9 @@
       card.className = "jm-hub-card" + (isSoon ? " jm-hub-card--soon" : "");
       if (!isSoon) {
         card.href = item.link;
+        // Explicit _self so a stray <base target="_blank"> on the host Tilda
+        // page can't force these into a new tab.
+        card.target = "_self";
       }
 
       var icon = document.createElement("div");
