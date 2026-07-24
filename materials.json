@@ -16,17 +16,17 @@
       "icon": "🗺️"
     },
     {
+      "id": "compilations",
+      "title": "Подборки",
+      "description": "Готовые подборки: A/B-тесты, сегменты, психотриггеры и ошибки аналитики",
+      "link": "https://джетметрикс.рф/hub-compilations",
+      "icon": "🗂️"
+    },
+    {
       "id": "boards",
       "title": "Доски",
       "description": "Рабочие материалы на Miro/Эсборд",
       "icon": "🧩",
-      "comingSoon": true
-    },
-    {
-      "id": "compilations",
-      "title": "Компиляции",
-      "description": "Подборки и базы: AB-тесты, идеи сегментации и другое",
-      "icon": "🗂️",
       "comingSoon": true
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "articles",
       "title": "Статьи",
-      "description": "Переводы статей по аналитике",
+      "description": "Статьи по аналитике на русском языке",
       "icon": "📝",
       "comingSoon": true
     }

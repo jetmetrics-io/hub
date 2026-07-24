@@ -6,6 +6,11 @@
   // here, or the hub starts lying the day a cheatsheet is added.
   var DATA_URL = "https://jetmetrics-static.storage.yandexcloud.net/hub-cheatsheets/data.json";
 
+  // Карточка Атласа у всех ведёт на ОДИН адрес (/hub-atlas). Free/pro больше НЕ
+  // разводим в хабе: с 2026-07-24 гейт полной версии живёт внутри самого приложения
+  // Атласа (оно само по paid.json решает, показать 3 карты или 28). См.
+  // site-state/SITE_STATE §7 и CHANGELOG. materials.json уже указывает на /hub-atlas.
+
   function pluralize(n, one, few, many) {
     var mod10 = n % 10;
     var mod100 = n % 100;
@@ -69,6 +74,8 @@
     .catch(function () { return null; });
 
   Promise.all([materialsPromise, countPromise])
-    .then(function (results) { render(results[0].materials || [], results[1]); })
+    .then(function (results) {
+      render(results[0].materials || [], results[1]);
+    })
     .catch(function (err) { console.error("JM Hub: failed to load materials.json", err); });
 })();
