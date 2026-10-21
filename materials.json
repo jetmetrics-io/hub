@@ -31,10 +31,10 @@
     },
     {
       "id": "dashboards",
-      "title": "Дашборды",
-      "description": "Готовые дашборды под русские источники данных",
-      "icon": "📈",
-      "comingSoon": true
+      "title": "Дашборд воронки",
+      "description": "Воронка вашего магазина из Яндекс Метрики: от визитов до выручки на одной странице",
+      "link": "https://джетметрикс.рф/hub-dashboards-funnel",
+      "icon": "📈"
     },
     {
       "id": "articles",
