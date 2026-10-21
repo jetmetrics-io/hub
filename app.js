@@ -1,4 +1,14 @@
 (function () {
+  // Пришли со старой открытой страницы дашборда (/dashboards-funnel → «Зарегистрироваться» / «Войти»): после входа
+  // Тильда открывает Хаб, а человек шёл за дашбордом — один раз уводим туда (отметку ставит dashboards/funnel/loader.js)
+  try {
+    var go = JSON.parse(localStorage.getItem("jm.goto") || "null");
+    if (go) {
+      localStorage.removeItem("jm.goto");
+      if (/^\/hub-[a-z-]+$/.test(go.path) && Date.now() - go.at < 86400000) { location.replace(go.path); return; }
+    }
+  } catch (e) { /* storage unavailable */ }
+
   var script = document.currentScript;
   var ASSET_BASE = script && script.src ? script.src.replace(/app\.js.*$/, "") : "";
 
