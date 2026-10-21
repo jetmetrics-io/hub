@@ -40,8 +40,10 @@
       if (!isSoon) {
         card.href = item.link;
         // Explicit _self so a stray <base target="_blank"> on the host Tilda
-        // page can't force these into a new tab.
-        card.target = "_self";
+        // page can't force these into a new tab. Links off the site (Статьи →
+        // Teletype, 21.10.2026) open in a new tab so the hub stays open.
+        if (card.hostname && card.hostname !== location.hostname) { card.target = "_blank"; card.rel = "noopener"; }
+        else card.target = "_self";
       }
 
       var icon = document.createElement("div");
