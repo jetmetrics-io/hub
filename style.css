@@ -109,6 +109,28 @@
   margin: 0;
 }
 
+.jm-hub-account {
+  margin: var(--jm-space-3) 0 0;
+  font-size: 14px;
+  color: var(--jm-muted);
+}
+
+.jm-hub-account b {
+  color: var(--jm-ink);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.jm-hub-account a {
+  color: var(--jm-green-deep);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.jm-hub-account a:hover {
+  text-decoration: underline;
+}
+
 .jm-hub-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));

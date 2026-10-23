@@ -9,6 +9,27 @@
     }
   } catch (e) { /* storage unavailable */ }
 
+  // Кто вошёл и «Выйти» — вход по почте (sign-in, с переключения с кабинета Тильды): почта из пропуска
+  // сервера входа, jmAuth грузит HEAD сайта. Без jmAuth (кабинет Тильды) строки нет.
+  (function account() {
+    var auth = window.jmAuth;
+    var header = document.querySelector(".jm-hub-header");
+    if (!auth || !auth.signedIn() || !header) return;
+    var line = document.createElement("p");
+    line.className = "jm-hub-account";
+    line.appendChild(document.createTextNode("Вы вошли как "));
+    var who = document.createElement("b");
+    who.textContent = auth.email();
+    line.appendChild(who);
+    line.appendChild(document.createTextNode(" · "));
+    var out = document.createElement("a");
+    out.href = "/";
+    out.textContent = "Выйти";
+    out.addEventListener("click", function (e) { e.preventDefault(); auth.signOut(); });
+    line.appendChild(out);
+    header.appendChild(line);
+  })();
+
   var script = document.currentScript;
   var ASSET_BASE = script && script.src ? script.src.replace(/app\.js.*$/, "") : "";
 
